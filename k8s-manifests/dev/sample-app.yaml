@@ -18,6 +18,9 @@ kind: Deployment
 metadata:
   namespace: dev
   name: helloworld
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.app: semver:~1.0
 spec:
   selector:
     matchLabels:
@@ -30,6 +33,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: gcr.io/operating-realm-241007/github.com/hulk0301/hello-world-app:v1.0.0
+        image: gcr.io/operating-realm-241007/github.com/hulk0301/hello-world-app:1.0.0
         ports:
         - containerPort: 80
