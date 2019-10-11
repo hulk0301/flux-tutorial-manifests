@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: dev-ingress
+  name: dev
+  namespace: dev
+spec:
+  rules:
+  - host: helloworld.dev.stawik.at
+    http:
+      paths:
+      - backend:
+          serviceName: helloworld
+          servicePort: 80
