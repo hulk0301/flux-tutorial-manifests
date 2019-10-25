@@ -33,6 +33,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: gcr.io/operating-realm-241007/github.com/hulk0301/hello-world-app:1.1.0
+        image: gcr.io/operating-realm-241007/github.com/hulk0301/hello-world-app:1.0.0
         ports:
         - containerPort: 80
